@@ -1,5 +1,4 @@
- default = <<EOF
-#!/bin/bash -x
+#!/bin/bash
 echo '################### webserver userdata begins #####################'
 touch ~opc/userdata.`date +%s`.start
 # echo '########## yum update all ###############'
