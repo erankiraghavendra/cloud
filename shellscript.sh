@@ -1,4 +1,10 @@
-!/bin/bash
+ default = <<EOF
+#!/bin/bash -x
+echo '################### webserver userdata begins #####################'
+touch ~opc/userdata.`date +%s`.start
+# echo '########## yum update all ###############'
+# yum update -y
+echo '########## basic webserver ##############'
 yum install -y httpd
 systemctl enable  httpd.service
 systemctl start  httpd.service
